@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    /* Add some CSS styles for a colorful login form */
+    body {
+                background-color: #F9D9F9;
+            }
+            form {
+                background-color: #FFF;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #BBB;
+                margin: 10% auto;
+                width: 400px;
+            }
+            input {
+                border-radius: 5px;
+                padding: 8px;
+                margin: 8px 0;
+                border: 1px solid #DDD;
+                width: 100%;
+            }
+            input[type="submit"] {
+                background-color: #5F9EA0;
+                color: #FFF;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .error {
+                color: #F00;
+                font-weight: bold;
+                text-align: center;
+            }
+    
+    
+    </style>
+<body>
+  <form>
+    Please Enter Your Height(cm): <input type="text" id="height">
+    <br>
+    Please Enter Your Age (years): <input type="text" id="age">
+    <br>
+    <button type="button" onclick="calculateWeight()">Calculate</button>
+  </form>
+  <br>
+  <p id="result"></p>
+
+  <script>
+    function calculateWeight() {
+      var height = document.getElementById("height").value;
+      var age = document.getElementById("age").value;
+      var weight = (height - 100 + age / 10) * 0.9;
+      document.getElementById("result").innerHTML = "Your Estimated weight Is: " + weight + "kg";
+    }
+  </script>
+</body>
+
